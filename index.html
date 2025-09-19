@@ -5,7 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minecraft Packs App</title>
 <style>
+  html {
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
   body {
+    min-width: 320px; /* prevent layout breaking on very small screens */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: #fff;
@@ -31,6 +43,7 @@
   .btn {
     display: block;
     width: 250px;
+    max-width: 90%; /* ensures button fits smaller screens */
     margin: 20px auto;
     padding: 15px;
     font-size: 1.2rem;
