@@ -14,11 +14,12 @@
   }
   .container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 100px auto 50px auto;
     background: rgba(0,0,0,0.7);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    position: relative;
   }
   h1 {
     text-align: center;
@@ -27,26 +28,44 @@
     color: #ffcc00;
     text-shadow: 2px 2px 8px #000;
   }
-  .download-btn {
+  .btn {
     display: block;
     width: 250px;
-    margin: 0 auto 40px;
+    margin: 20px auto;
     padding: 15px;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
     color: #fff;
-    background: linear-gradient(45deg, #ff6f00, #ff8f00);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     text-decoration: none;
+  }
+  .download-btn {
+    background: linear-gradient(45deg, #ff6f00, #ff8f00);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
   .download-btn:hover {
     background: linear-gradient(45deg, #ff8f00, #ffc400);
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+  .back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(45deg, #555, #777);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    z-index: 1000;
+  }
+  .back-btn:hover {
+    background: linear-gradient(45deg, #777, #999);
+    transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   }
   .tutorial {
@@ -55,6 +74,7 @@
     background: rgba(255,255,255,0.1);
     padding: 20px;
     border-radius: 15px;
+    margin-top: 30px;
   }
   .tutorial h2 {
     color: #ffcc00;
@@ -69,14 +89,15 @@
 </style>
 </head>
 <body>
+<a class="btn back-btn" href="https://sifat8668.github.io/M-packs/">Back</a>
 <div class="container">
   <h1>Minecraft Packs App</h1>
-  <a class="download-btn" href="YOUR_GOOGLE_DRIVE_LINK_HERE" download>Download APK</a>
+  <a class="btn download-btn" href="YOUR_GOOGLE_DRIVE_LINK_HERE" download>Download APK</a>
   <div class="tutorial">
     <h2>How to Install APK Files:</h2>
     <ol>
       <li>Download the APK using the button above.</li>
-      <li>Go to your device's Settings &rarr; Security &rarr; Enable "Install unknown apps" for your file manager.</li>
+      <li>Go to your device's Settings &rarr; Security &rarr; Enable "Install unknown apps" for your browser or file manager.</li>
       <li>Open the downloaded APK file from your file manager.</li>
       <li>Tap "Install" and wait for the installation to complete.</li>
       <li>Once installed, open the app and enjoy!</li>
